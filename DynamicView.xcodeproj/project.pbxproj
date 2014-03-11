@@ -19,6 +19,12 @@
 		C3A0E65718CF98350092B22C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A0E63F18CF98340092B22C /* UIKit.framework */; };
 		C3A0E65F18CF98350092B22C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3A0E65D18CF98350092B22C /* InfoPlist.strings */; };
 		C3A0E66118CF98350092B22C /* DynamicViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A0E66018CF98350092B22C /* DynamicViewTests.m */; };
+		C3A0E66C18CF996B0092B22C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A0E66B18CF996B0092B22C /* ViewController.m */; };
+		C3A0E66D18CF996B0092B22C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A0E66B18CF996B0092B22C /* ViewController.m */; };
+		C3A0E67018CF99C90092B22C /* DynamicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A0E66F18CF99C90092B22C /* DynamicView.m */; };
+		C3A0E67118CF99C90092B22C /* DynamicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A0E66F18CF99C90092B22C /* DynamicView.m */; };
+		C3A0E67418CF9A2D0092B22C /* HaloView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A0E67318CF9A2D0092B22C /* HaloView.m */; };
+		C3A0E67518CF9A2D0092B22C /* HaloView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A0E67318CF9A2D0092B22C /* HaloView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,12 @@
 		C3A0E65C18CF98350092B22C /* DynamicViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DynamicViewTests-Info.plist"; sourceTree = "<group>"; };
 		C3A0E65E18CF98350092B22C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C3A0E66018CF98350092B22C /* DynamicViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicViewTests.m; sourceTree = "<group>"; };
+		C3A0E66A18CF996B0092B22C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C3A0E66B18CF996B0092B22C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C3A0E66E18CF99C90092B22C /* DynamicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicView.h; sourceTree = "<group>"; };
+		C3A0E66F18CF99C90092B22C /* DynamicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicView.m; sourceTree = "<group>"; };
+		C3A0E67218CF9A2D0092B22C /* HaloView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HaloView.h; sourceTree = "<group>"; };
+		C3A0E67318CF9A2D0092B22C /* HaloView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HaloView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,12 @@
 			children = (
 				C3A0E64A18CF98340092B22C /* AppDelegate.h */,
 				C3A0E64B18CF98340092B22C /* AppDelegate.m */,
+				C3A0E66A18CF996B0092B22C /* ViewController.h */,
+				C3A0E66B18CF996B0092B22C /* ViewController.m */,
+				C3A0E66E18CF99C90092B22C /* DynamicView.h */,
+				C3A0E66F18CF99C90092B22C /* DynamicView.m */,
+				C3A0E67218CF9A2D0092B22C /* HaloView.h */,
+				C3A0E67318CF9A2D0092B22C /* HaloView.m */,
 				C3A0E64D18CF98340092B22C /* Images.xcassets */,
 				C3A0E64218CF98340092B22C /* Supporting Files */,
 			);
@@ -239,6 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A0E67018CF99C90092B22C /* DynamicView.m in Sources */,
+				C3A0E67418CF9A2D0092B22C /* HaloView.m in Sources */,
+				C3A0E66C18CF996B0092B22C /* ViewController.m in Sources */,
 				C3A0E64C18CF98340092B22C /* AppDelegate.m in Sources */,
 				C3A0E64818CF98340092B22C /* main.m in Sources */,
 			);
@@ -248,6 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A0E67518CF9A2D0092B22C /* HaloView.m in Sources */,
+				C3A0E67118CF99C90092B22C /* DynamicView.m in Sources */,
+				C3A0E66D18CF996B0092B22C /* ViewController.m in Sources */,
 				C3A0E66118CF98350092B22C /* DynamicViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
