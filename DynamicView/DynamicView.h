@@ -7,20 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import <Foundation/Foundation.h>
 
 @protocol DynamicViewDelegate;
-
 
 @interface DynamicView : UIView
 
 @property (nonatomic, assign) id <DynamicViewDelegate> delegate;
 @property (nonatomic, strong) UIView *contentView;
 
-
-// Defaults to NO. Allow users from dragging the view outside the parent view's bounds.
-@property (nonatomic) BOOL grounded; // same as clipsToBounds?
-@property (nonatomic) BOOL proportional;
+@property (nonatomic) BOOL grounded;        // Defaults to NO.
+@property (nonatomic) BOOL proportional;    // Defaults to NO.
 
 - (void)hideHaloView;
 - (void)showHaloView;
