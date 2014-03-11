@@ -112,7 +112,7 @@
     }
     
     // Show haloView.
-    self.haloView.hidden = NO;
+    [self showHaloView];
     
     UITouch *touch = [touches anyObject];
     
@@ -211,7 +211,7 @@
         // Ratio is irrelavant.
     }
     
-    // Limit the smallest size it can be.
+    // Limit the smallest size it can be. (3 eyeballs width.)
     CGFloat minimumSideLength = self.haloView.eyeballRadius*2*3;
     if(self.proportional)
     {
@@ -243,6 +243,7 @@
 
 - (void)translateTo:(CGPoint)touchPoint
 {
+    // Get the deltas.
     CGFloat dx = touchPoint.x - self.touchStart.x;
     CGFloat dy = touchPoint.y - self.touchStart.y;
     

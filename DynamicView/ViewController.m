@@ -51,8 +51,6 @@
 
 - (void)viewDidLoad
 {
-    //self.view.backgroundColor = [UIColor grayColor];
-    
     // Load all dynamic views.
     for(UIView *v in self.dynamicViews)
     {
