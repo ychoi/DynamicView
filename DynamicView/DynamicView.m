@@ -106,21 +106,24 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    // (1) First, let the delegate know user touched screen.
     if ([self.delegate respondsToSelector:@selector(dynamicViewDidBeginTouches:)])
     {
         [self.delegate dynamicViewDidBeginTouches:self];
     }
-    
-    // Show haloView.
-    [self showHaloView];
-    
+
     UITouch *touch = [touches anyObject];
     
-    // (1) Get the eyeball for the point user poked at.
+    // (2) Get the eyeball user poked at in a haloView.
     self.pokedEye = [self.haloView eyeballForPoint:[touch locationInView:self.haloView]];
     
-    // (2) Save the staring point.
-    self.touchStart = [self isResizing] ? [touch locationInView:self.superview] : [touch locationInView:self];
+    // (3) Save the staring point, based on different perspectives.
+    CGPoint pointSuperView = [touch locationInView:self.superview];
+    CGPoint pointSelf = [touch locationInView:self];
+    self.touchStart = [self isResizing] ? pointSuperView : pointSelf;
+    
+    // (4) Show haloView.
+    [self showHaloView];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -137,6 +140,8 @@
     {
         [self.delegate dynamicViewDidEndTouches:self];
     }
+    
+    //self.transform = CGAffineTransformIdentity;
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -248,7 +253,7 @@
     CGFloat dy = touchPoint.y - self.touchStart.y;
     
     CGPoint aCenter = CGPointMake(self.center.x + dx, self.center.y + dy);
-    
+
     if (self.grounded)
     {
         // Ensure the translation stays within the superview's bounds.
